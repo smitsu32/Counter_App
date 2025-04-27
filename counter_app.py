@@ -9,7 +9,7 @@ class CounterApp:
         
         # ウィンドウの設定
         self.root.title("シンプルカウンター")
-        self.root.geometry("400x520")
+        self.root.geometry("560x400")
         self.root.configure(bg="#f0f0f0")
         
         # スタイルの設定
@@ -31,7 +31,7 @@ class CounterApp:
         self.counter_frame.pack(pady=15)
         
         self.counter_label = ttk.Label(self.counter_frame, text=str(self.counter_value), 
-                                    style="Counter.TLabel", cursor="hand2")
+                                      style="Counter.TLabel", cursor="hand2")
         self.counter_label.pack(pady=5, padx=30)
         # カウンターラベルをクリック可能に
         self.counter_label.bind("<Button-1>", lambda e: self.increment())
